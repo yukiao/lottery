@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/index.7e4c9565.css">
+    <link rel="stylesheet" href="https://github.hubspot.com/odometer/themes/odometer-theme-default.css">
+    <!-- <script src="https://github.hubspot.com/odometer/odometer.js"></script> -->
+    <script src="assets/index.9f953716.js"></script>
+    <style>
+
+      body {
+        min-width: 230px;
+        text-align: center;
+        font-family: "Poppins";
+      }
+
+      header h1 {
+        font-weight: normal;
+        padding: 20px;
+        font-size: 42px;
+        letter-spacing: 0.1em;
+      }
+
+      main {
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+        font-size: clamp(60px, 30vw, 200px);
+        border: solid 2px;
+      }
+
+      main #odometer {
+        display: block;
+        margin: 0;
+        padding: 0 20px;
+      }
+
+    </style>
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="hamburger ">
+      <div class="bar"></div>
+    </div>
+    <div class="sidebar">
+      <form>
+        <div class="form-input">
+          <label>Exclude</label>
+          <input 
+            type="text" 
+            id="exclude" 
+            name="exclude" 
+            placeholder="eg. 12;25;104;56" 
+          />
+        </div>
+        <div class="form-input">
+          <label>
+            Range
+          </label>
+          <input 
+            type="number" 
+            placeholder="eg. 2500"
+            min="0" 
+            id="range" 
+            name="range" 
+          />
+        </div>
+        <button id="update-data">Update</button>
+      </form>
+    </div>
+    <div class="main-content">
+        <div>
+            <header>  
+              <h1>Sistem Lot Undian</h1>
+            </header>
+            <main>
+              <p class="odometer" id="odometer">0</p>
+            </main>
+        </div>
+        <div class="lottery-wrapper">
+          <button class="lottery-button">Undi</button>
+          <button class="reset-button">Reset</button>
+        </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
